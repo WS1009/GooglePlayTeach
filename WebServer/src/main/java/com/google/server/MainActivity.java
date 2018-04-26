@@ -1,14 +1,12 @@
 package com.google.server;
 
-import java.io.File;
-
-import org.mortbay.ijetty.log.AndroidLog;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
+
+import org.mortbay.ijetty.log.AndroidLog;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 	private Button mBtStart, mBtStop, mBtSetting;
@@ -42,7 +40,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		switch (view.getId()) {
 			case R.id.bt_start:
 				onStartClick();
-				System.out.println("Path:"+Environment.getExternalStorageDirectory().getAbsolutePath()+ "/" + "WebInfos/app/applist1");
 				break;
 			case R.id.bt_stop:
 				onStopClick();
@@ -51,7 +48,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				onSettingClick();
 				break;
 		}
-	}jiexialai 
+	}
 
 	public void onStartClick() {
 		Intent intent = new Intent(this, WebService.class);
@@ -63,4 +60,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		stopService(intent);
 	}
 
-	public void onSettingClick() {
+	public void onSettingClick() {
+
+	}
+}
